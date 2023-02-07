@@ -1,0 +1,8 @@
+{
+  "promptDelete": false,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "strictLineBreaks": true,
+  "showFrontmatter": true,
+  "showLineNumber": true
+}

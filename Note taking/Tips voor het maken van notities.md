@@ -1,0 +1,4 @@
+- Maak notities van bijzonder gedrag, nieuwe functies, misconfiguraties, kleine bugs en verdachte endpoints.
+- hou je hacking progressie bij, per project met (sub) domein Wat je hebt getest en wat je nog wil testen.
+- Maak notities terweil je leert, noteer elke vulnerbility en wat de mogelijke impact daarvan kan zijn, vervolgstappen en eventueel code.
+- Blijf georganiseerd. Werk met mappen en duidelijke omschrijvingen.
