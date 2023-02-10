@@ -4,12 +4,12 @@
 - Import standard library modules first, followed by a blanc line and then the modules you wrote.
 - A function should always return an value or None.
 
-When a variable needs to stay a constant in the program, write the name in all caps.
+>When a variable needs to stay a constant in the program, write the name in all caps.
 ```python
 MAX_AGE = 65
 ```
 
-If you specify a default value for a parameter, no spaces should be used on either side of the equal singn. Same goes for keyword arguments
+>If you specify a default value for a parameter, no spaces should be used on either side of the equal singn. Same goes for keyword arguments.
 ```python
 def function_name(parameter_0, parameter_1='default value'):
 
@@ -60,8 +60,8 @@ class ScannerInfo: # write classes in CamelCase. No unnderscores
 if __name__ == '__main__':
 
 ```
->So when the interpreter runs a module, the `__name__` variable will be set as  `__main__` if the module that is being run is the main program.
->But if the code is importing the module from another module, then the `__name__`  variable will be set to that module’s name.
+
+>When the interpreter runs a module, the `__name__` variable will be set as  `__main__` if the module that is being run is the main program. But if the code is importing the module from another module, then the `__name__`  variable will be set to that module’s name.
 ```python
 # File_one
 # Python module to execute
@@ -83,13 +83,15 @@ if __name__ == "__main__":
    print("File two executed when ran directly")
 else:
    print("File two executed when imported")
-```
 
->If run from file_one (the main file) the output should look like this
+"""
+If run from file_one (the main file) the output should look like this:
 File two __name__ is set to: file_two
 File two executed when imported
 File one __name__ is set to: __main__
 File one executed when ran directly.
+"""
+```
 
 ---
 
@@ -98,14 +100,14 @@ File one executed when ran directly.
 ```python
 # string with user input > output string
 sample = input('Wat is je geluksgetal? ')
-print(sample + ' is je geluksgetal')
+print(f'{sample} is je geluksgetal')
 ```
 
-string letters:
+String letters:
 >\\n = nieuwe regel
 >\\t = tab
 >\\b =   
->\d =
+>\\d =
 
 Stripping whitespace:
 ```python
@@ -130,7 +132,7 @@ file.removesuffix('.txt')
 
 ---
 
-## Gereserveerde woorden
+## Reserved words
 
 and
 as
@@ -167,27 +169,42 @@ yield
 
 ## Operators
 
-**Normale operators:
+Normal operators:
+>=
+>+
+>-
+>*
+>** (exponentiation)
+>/
 
-=
-+
--
-*
-** (exponentiel)
-/
-% (modulo) divides one number by the other and returns the remainder.
+% (modulus): 
 ```python
+# Divides one number by the other and returns the remainder.
 >>> 4 % 3 #output = 1
 >>> 6 % 3 #output = 0
 ```
-//
 
-**Bitwise Operators:
+// (floor devision):
+```python
+# the floor division // rounds the result down to the nearest whole number
+x = 15
+y = 2
 
-AND (&)
-OR (|)
-XOR (^)
-NOT (~)
+print(x // y)
+```
+
+Bitwise Operators:
+>Bitwise operators are used to compare (binary) numbers:
+
+| Operator | Name | Description |
+|---|---|---|
+| & | AND | Sets each bit to 1 if both bits are 1 |
+| | OR | Sets each bit to 1 if one of two bits is 1 |
+| ^ | XOR | Sets each bit to 1 if only one of two bits is 1 |
+| ~ | NOT | Inverts all the bits |
+| << | Zero fill left shift | Shift left by pushing zeros in from the right and let the leftmost bits fall off |
+| >> | Signed right shift | Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off |
+[Python operators reference](https://www.w3schools.com/python/python_operators.asp)
 
 ---
 

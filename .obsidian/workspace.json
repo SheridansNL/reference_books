@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "4ea3fc42161071be",
+        "id": "189db4df091a3347",
         "type": "tabs",
         "children": [
           {
-            "id": "396318607f49c63d",
+            "id": "edd5528daa96754b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/Python course.md",
+                "file": "markdown-cheat-sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "65ec8e93a6683188",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Python/Python reference.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/Python course.md",
+                "file": "Python/Python reference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/Python course.md",
+                "file": "Python/Python reference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/Python course.md"
+                "file": "Python/Python reference.md"
               }
             }
           }
@@ -146,12 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "396318607f49c63d",
+  "active": "65ec8e93a6683188",
   "lastOpenFiles": [
-    "Linux/Linux CLI.md",
-    "Python/Python course.md",
-    "Python/pcc.md",
     "markdown-cheat-sheet.md",
+    "Python/Python reference.md",
+    "Linux/Linux CLI.md",
+    "Python/pcc.md",
     "Python/Blackhat Python.md",
     "Recon/Scope discovery.md",
     "Recon/Google Dorking.md",
