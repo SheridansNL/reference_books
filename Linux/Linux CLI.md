@@ -257,3 +257,13 @@ find / -user root -perm -4000
 ---
 
 ## Process Management
+
+---
+
+## Mounting to  server
+
+```bash
+# used to mount container to NAS
+mount -t cifs //172.100.100.10/Films /media/films -o user=username 
+```
+

@@ -53,7 +53,7 @@ class ScannerInfo: # write classes in CamelCase. No unnderscores
 	""" A class should have a docstring!"""
 # two lines of whitespace
 # global variables
- x = x +y
+ x = x + y
  MAX = 3
 # two lines of whitespace
 # finally the main function block
@@ -104,10 +104,22 @@ print(f'{sample} is je geluksgetal')
 ```
 
 String letters:
->\\n = nieuwe regel
->\\t = tab
->\\b =   
->\\d =
+| character | discription |
+| --- | --- |
+| \n | newline |
+| \t | horizontal tab |
+| \r | carriage return | 
+| \b | backspace |
+| \f | form feed |
+| \' | single quote |
+| \" | double quote |
+| \\ | backslash |
+| \v | vertical tab |
+| \N | N is the number for Unicode character |
+| \NNN | NNN is digits for Octal value |
+| \xNN | NN is a hex value; \x is used to denote following is a hex value. |
+| \a | bell sound, actually default chime |
+
 
 Stripping whitespace:
 ```python
@@ -797,7 +809,7 @@ while i <= n:
     if i % 3 == 0:  
         print(i, 'deelbaar door 3')  
         break  # breaks out of loop
-    i = i + 1
+    i += 1
 
 #for loop with continue statement
 for var in 'computer':  
