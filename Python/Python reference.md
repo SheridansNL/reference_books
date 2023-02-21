@@ -4,6 +4,12 @@
 - Import standard library modules first, followed by a blanc line and then the modules you wrote.
 - A function should always return an value or None.
 
+Throwaway variable:
+```python
+for _ in range(5): # underscore 
+	numbers_thrown.append(randint(1, 6))
+```
+
 >When a variable needs to stay a constant in the program, write the name in all caps.
 ```python
 MAX_AGE = 65
@@ -32,7 +38,7 @@ answer = input(prompt)
 
 Code hygene:
 ```python
-# at the top import packages
+# At the top import packages
 from lxml import etree
 # 2 lines of whitespace
 # Second import modules
@@ -74,6 +80,7 @@ if __name__ == "__main__":
 else:
    print("File one executed when imported")
 
+# ==========================================================
 # File_two
 # Python module to import
 
@@ -84,13 +91,12 @@ if __name__ == "__main__":
 else:
    print("File two executed when imported")
 
-"""
-If run from file_one (the main file) the output should look like this:
-File two __name__ is set to: file_two
-File two executed when imported
-File one __name__ is set to: __main__
-File one executed when ran directly.
-"""
+
+# If run from file_one (the main file) the output should look like this:
+# File two __name__ is set to: file_two
+# File two executed when imported
+# File one __name__ is set to: __main__
+# File one executed when ran directly.
 ```
 
 ---
@@ -99,11 +105,12 @@ File one executed when ran directly.
 
 ```python
 # string with user input > output string
-sample = input('Wat is je geluksgetal? ')
+sample = input('Give a number? ')     # output type = string
+sample = int(input('Give a number? ') # output type = integer
 print(f'{sample} is je geluksgetal')
 ```
 
-String letters:
+Special characters in a string:
 | character | discription |
 | --- | --- |
 | \n | newline |
@@ -119,7 +126,8 @@ String letters:
 | \NNN | NNN is digits for Octal value |
 | \xNN | NN is a hex value; \x is used to denote following is a hex value. |
 | \a | bell sound, actually default chime |
-
+| 
+[List of unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters)
 
 Stripping whitespace:
 ```python
@@ -365,15 +373,25 @@ print(universe_age) # output 14000000000
 Lijsten hebben dezelfde eigenschappen die variabelen bevatten.
 De inhoud van een lijst noemt men elementen.
 
-Lists:
+Lists with differtent data types:
 ```python
-#lege lijst
-sample = []
-#lijst met integers
-sample = [25, 35, 45]
-#lijst met string type
-sample = ['Ede', 'Utrecht', 'Stroe']
+sample = []                           # empty list
+sample = [25, 35, 45]                 # list with integers
+sample = ['Ede', 'Utrecht', 'Stroe']  # list with strings
 print(sample)
+```
+
+List modification methods:
+```python
+codes = ['NL','B','L']
+
+codes.append('F')          # ['NL','B','L','F']
+codes.extend(['D', 'I'])   # ['NL','B','L','F','D','I']
+codes.insert(1, 'ES')      # ['NL','ES',B','L','F','D','I']
+code = codes.pop()         # ['NL','ES',B','L','F','D']
+codes.remove('L')          # ['NL','ES',B','F','D']
+del codes[1]               # ['NL',B','F','D']
+codes.sort()               # ['B','D','F','NL']
 ```
 
 Indexes:
@@ -501,6 +519,11 @@ x.sorted(reverse=True)
 x = [1, 223, 2, 45, 63, 22]
 x.reverse()
 print(x)
+
+# unpacking
+t = (10, 20, 30, 40)
+v1, v2, *rest = t
+# output = v1=10, v2=20, rest=[30, 40]
 ```
 
 List comprehensions:
@@ -606,6 +629,13 @@ for key, value in dict_0.items(): #items returns key + value)
 for key in dict_0.keys(): # only pulls the keys
 for value in dict_0.values(): # only pulls the values
 
+# listen
+keys = list(codes.keys())
+values = list(codes.values())
+
+# zipping
+d = dict(zip(keys, values))
+
 # sort the dictionay
 for key in sorted(dict_0.keys()):
 
@@ -669,6 +699,13 @@ Almost all booleans are True except the following:
 >bool({})
 
 Conditional statements
+```python
+# oneliner
+gender = 'm'
+salution = 'sir' if gender.lower() == 'm' else 'madam'
+# output = sir
+```
+
 ```python
 number = 40
 if number % 3 == 0:
@@ -823,6 +860,18 @@ while num < 10:
 	if num % 2 == 0:
 		continue # starts at top of loop again
 	print(num) #outputs only the odd numbers.
+```
+
+```python
+# new match conditional statement
+gender = 'm'
+match gender:
+	case 'm':
+		print('man')
+	case 'f' | 'v':
+		print('woman')
+	case _:
+		print('other')
 ```
 
 ---
