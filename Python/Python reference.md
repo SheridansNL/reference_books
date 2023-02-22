@@ -1,10 +1,10 @@
 ## Best practice
 
 - Work in alphabetical order
-- Import standard library modules first, followed by a blanc line and then the modules you wrote.
+- Import standard library modules first, followed by a blank line and then the modules you wrote.
 - A function should always return an value or None.
 
-Throwaway variable:
+>Python has `_` that you should use for variables you intend to throw away.
 ```python
 for _ in range(5): # underscore 
 	numbers_thrown.append(randint(1, 6))
@@ -15,7 +15,7 @@ for _ in range(5): # underscore
 MAX_AGE = 65
 ```
 
->If you specify a default value for a parameter, no spaces should be used on either side of the equal singn. Same goes for keyword arguments.
+>If you specify a default value for a parameter, no spaces should be used on either side of the equal sign. Same goes for keyword arguments.
 ```python
 def function_name(parameter_0, parameter_1='default value'):
 
@@ -28,9 +28,9 @@ def function_name(
 	# function body
 ```
 
-Write clear input promts:
+Write clear input prompts:
 ```python
-# Make sure the lines in the code dont exceed 79 chars.
+# Make sure the lines in the code don't exceed 79 chars.
 prompt = 'if the prompt is getting to long'
 prompt += 'you can use multiple lines to write clear prompts: '
 answer = input(prompt)
@@ -67,7 +67,8 @@ if __name__ == '__main__':
 
 ```
 
->When the interpreter runs a module, the `__name__` variable will be set as  `__main__` if the module that is being run is the main program. But if the code is importing the module from another module, then the `__name__`  variable will be set to that module’s name.
+>When the interpreter runs a module, the `__name__` variable will be set as  `__main__` if the module that is being run is the main program. 
+>But if the code is importing the module from another module, then the `__name__`  variable will be set to that module’s name.
 ```python
 # File_one
 # Python module to execute
@@ -107,7 +108,7 @@ else:
 # string with user input > output string
 sample = input('Give a number? ')     # output type = string
 sample = int(input('Give a number? ') # output type = integer
-print(f'{sample} is je geluksgetal')
+print(f'You chose the number: {sample}.')
 ```
 
 Special characters in a string:
@@ -126,7 +127,7 @@ Special characters in a string:
 | \NNN | NNN is digits for Octal value |
 | \xNN | NN is a hex value; \x is used to denote following is a hex value. |
 | \a | bell sound, actually default chime |
-| 
+| \u0263 | To input unicode |
 [List of unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters)
 
 Stripping whitespace:
@@ -190,12 +191,14 @@ yield
 ## Operators
 
 Normal operators:
->=
->+
->-
->*
->** (exponentiation)
->/
+```python
+=
++
+-
+*
+** (exponent)
+/
+```
 
 % (modulus): 
 ```python
@@ -228,25 +231,25 @@ Bitwise Operators:
 
 ---
 
-## Variabelen
+## Variables
 
-Regels:
-* Alleen letters, cijfers en underscore
-* Een variabele mag niet beginnen met een cijfer
-* Gereserveerde woorden mogen niet gebruikt worden in een variabele
-* Gebruik simpele en duidelijke benamingen
+Rules:
+* Only letters, numbers and underscore
+* A variable may not begin with a number
+* Reserved words may not be used in a variable
+* Use simple and clear designations
 
 ```python
-# Het geheugenadres van een variabele opvragen
+# Retrieving the memory address of a variable
 sample = 64
 memaddr = id(sample)
 print(memaddr)
 
-# manier 2
+# option 2
 print(id(sample))
 ```
 
-Lokale variabelen
+Local variables:
 ```python
 def sample():
 	example = 'Dit is een lokale variabele'
@@ -255,20 +258,21 @@ def sample():
 sample()
 ```
 
-Globale variabelen
+Global variables:
 ```python
-#Globale variabele
-example = 'Dit is een globale variabele die vaker te gebruiken is'
+#Global variable
+example = 'This is a global variable that can be used more often'
 
-
-def sample():
+def sample_1():
 	print(example)
 
-def secondsample():
+def sample_2():
+		global example # keyword global
 	print(example)
 
-sample()
-secondsample()
+def sample_3():
+		nonlocal example # keyword nonlocal
+	print(example)
 ```
 
 ---
@@ -277,75 +281,77 @@ secondsample()
 
 ```python
 x = 34
-# x is een variabele
-# = is een operator
-# 34 is een literal
+# x is a variable
+# = is an operator
+# 34 is a literal
 
-y = "Dit is een string"
-# De tekst tussen de "dubbele quotes" is een string
-# Je kan ook ```drie enkele gebruiken ```
-# Je kan ook """ op meerdere regels """ gebruiken
+y = "This is a string"
+# You can also use 'single quotes'
+# You can also use ```three single quotes```
+# For multiple lines """ three double quotes """
 ```
 
+Indexing and slicing:
 ```python
-# Om karakters in een string te gebruiken kan je gebruik maken van index nummers.
-
-first = "Dit is een string"
-print("Eerste karakter = ", first[0])
-# Negatief indexen
-print("Laatste karakter = ",first[-1])
-# Meerdere karakters (van index 0 tot 1)
-print("Meerdere karakters = ", first[0:2]
-
+# Indexing characters in a sting.
+first = "This is a string"
+print("First character = ", first[0])
+# Negative indexing
+print("Last character = ",first[-1])
+# Multiple characters (index 0 and 1)
+print("Multiple characters = ", first[0:2] # output: Th
 ```
 
+String formatting:
 ```python
-#  De modulus (%) operator staat bekend als string formatting operator
-print("Ik heb vanacht %d keer geneukt" %20)
-# output: Ik heb vannacht 20 keer geneukt.
-```
+# The modulus operator(%) is used for string formatting.
+print("I am %d years old." %20) # %s for string and %d for digit.
+# output: I am 20 years old.
 
-```python
-#String manipulatie
-example = "Knip en " + "plakwerk"
-example = "Gas " * 3
-
-#Sting tekst toevoegen aan variabele
-example = "Vandaag is het mooi weer "
-example += "of toch niet"
-print(example)
-
-#Karakter lengte printen
-print(len(example))
-
-#Delen van een string zoeken. De output geeft het indexnummer van de eerste keer dat de input gevonden is.
-example = "Dit is een mooi stukje tekst"
-sample = example.find("st")
-print(sample)
-#Als de interpreter niks vind dat is de output -1
-
-#Om een sting naar hoofd of kleine letters te veranderen kan gebruikt worden gemaakt van upper of lower. Camel case kan met title.
-sample = input("Which country do you belong to?")
-print (sample.upper() + " is a great country!")
-# je kan ook lower() of title() gebruiken
-```
-
-```python
 # using an f-string. (f = format)
-sample = input('Wat is je geluksgetal? ')
-output = f"{sample} is je geluksgetal"
+output = f'{name} is {age} years old'
 print(output)
 
-#or
-print(f"{sample} is je geluksgetal")
+#or 
+print( f'{name} is {age} years old' )
+print( name + ' is ' + str(age) + ' years old' )
+print( '%s is %d years old ' % (name, age) )
+print( '{} is {} years old'.format(name, age) )
 ```
 
+String manipulation:
 ```python
-#integer nummers
+example = "My name is " + "Monty Python" #concatinate
+example = "Gas " * 3
+
+#concatinate by using +=
+example = "It's a good day " # you can use a single quote 
+example += "for a drive"
+print(example)
+
+#Print number of characters in a variable
+print(len(example))
+
+#Searching a string. 
+#It outputs the index number of the first iteration
+example = "Some text"
+sample = example.find("te")
+print(sample)
+#If the interpreter finds nothing it outputs -1
+
+#Changing a text to all upper() or lower() case.
+#Other options are capitalize() and title()
+sample = input("Which country do you belong to?")
+print(sample.upper())
+```
+
+Integers:
+```python
+#integer numbers
 x = 25
 y = -25
 
-# multiple assignment
+#multiple assignment
 x, y, z = 10, 20, 30
 
 #floating point nummers voor decimalen
@@ -378,7 +384,11 @@ Lists with differtent data types:
 sample = []                           # empty list
 sample = [25, 35, 45]                 # list with integers
 sample = ['Ede', 'Utrecht', 'Stroe']  # list with strings
+sample = list(range(10))              # build in function()
 print(sample)
+
+import string
+letters = list(string.ascii_uppercase)# complete alfabet
 ```
 
 List modification methods:
@@ -390,6 +400,7 @@ codes.extend(['D', 'I'])   # ['NL','B','L','F','D','I']
 codes.insert(1, 'ES')      # ['NL','ES',B','L','F','D','I']
 code = codes.pop()         # ['NL','ES',B','L','F','D']
 codes.remove('L')          # ['NL','ES',B','F','D']
+codes.reverse()            # ['L', 'B', 'NL']
 del codes[1]               # ['NL',B','F','D']
 codes.sort()               # ['B','D','F','NL']
 ```
@@ -406,6 +417,27 @@ sample[2] #output Stroe
 print(sample[0] + "is de beste")
 #print(sample[3] + "is de beste") out of list range
 #print(sample[1.2] + "is de beste") floating-point kan niet
+```
+
+Build in functions and lists:
+```python
+l1 = [1, 2, 3, 4, 5]
+len(l1)    # 5
+max(l1)    # 5
+min(l1)    # 1
+sum(l1)    # 15
+sorted()
+filter()
+map()
+all()
+any()
+```
+
+Split and join:
+```python
+text = 'This is a story about'
+words = text.split()      # makes a list of al the words
+print(' '.join(words)     # returns the list to a string
 ```
 
 Range()
@@ -642,8 +674,17 @@ for key in sorted(dict_0.keys()):
 # if a dictionary  has a lot of duplicate values you can use set
 for value in set(dict_0.values()): #filters duplicates
 ```
->Note: You can also build a set directly, using braces. You can keep them apart. A dictionary has KeyValue pairs,  where sets only have values.
->steden = {'Ede', 'Elst', 'Nijmegen', 'Maarsen'}
+[1]: You can also build a set directly, using braces. You can keep them apart. A dictionary has KeyValue pairs,  where sets only have values.
+
+Set:
+>The function set() is used to make a set from other collections
+```python
+s1 = set()           # empty set
+s1.add(5)            # {5}
+s1.update({1,7,9})   # {1, 5, 9, 7}
+s1.remove(9)         # {1, 5, 7}
+s1.discard(9)        # {1, 5, 7}
+```
 
 ----
 
