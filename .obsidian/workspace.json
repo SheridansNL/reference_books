@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "markdown-cheat-sheet.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "65ec8e93a6683188",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Python/Python reference.md",
+                "file": "Python/02_virtual_enviroment.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/Python reference.md",
+                "file": "Python/02_virtual_enviroment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/Python reference.md",
+                "file": "Python/02_virtual_enviroment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/Python reference.md"
+                "file": "Python/02_virtual_enviroment.md"
               }
             }
           }
@@ -159,17 +146,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "65ec8e93a6683188",
+  "active": "edd5528daa96754b",
   "lastOpenFiles": [
-    "Linux/Linux CLI.md",
+    "Python/04_basics.md",
+    "Python/14_data_science.md",
+    "Python/03_version_control.md",
+    "Python/01_best_practice.md",
     "Python/Python reference.md",
-    "markdown-cheat-sheet.md",
-    "Python/pcc.md",
-    "Python/Blackhat Python.md",
-    "Recon/Scope discovery.md",
-    "Recon/Google Dorking.md",
-    "2022-11-03.md",
-    "Note taking/Tips voor het maken van notities.md",
-    "WHOIS en reverse WHOIS.md"
+    "Python/16_documentation.md",
+    "Python/15_blackhat_python.md",
+    "Python/14_data_science",
+    "Python/13_advanced.md",
+    "Python/15_documentation.md",
+    "Python/13_blackhat_python.md",
+    "Python/12_usefull_libraries.md",
+    "Python/11_testing.md",
+    "Python/10_exception_handling.md",
+    "Python/09_file_handling.md",
+    "Python/08_object_oriented_programming.md",
+    "Python/07_functions_and_modules.md",
+    "Python/06_conditionals_and_loops.md",
+    "Python/05_advanced_data_structures.md",
+    "Python/05_advanced_data_structures",
+    "Python/basics.md",
+    "Python/documentation.md",
+    "Python/object_oriented_programming.md",
+    "Python/file_handling.md",
+    "Python/exception_handling.md",
+    "Python/exception_handling",
+    "Python/testing.md",
+    "Python/usefull_libraries.md",
+    "Python/Untitled.canvas",
+    "Python/02_virtual_enviroment.md",
+    "Python/virtual enviroment",
+    "Untitled.canvas"
   ]
 }
